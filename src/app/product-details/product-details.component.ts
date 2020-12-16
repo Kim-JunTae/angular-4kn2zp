@@ -8,9 +8,11 @@ import { products } from "../products";
   styleUrls: ["./product-details.component.css"]
 })
 export class ProductDetailsComponent implements OnInit {
-  products;
+  product;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
